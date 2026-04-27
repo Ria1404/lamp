@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightLite Smart Lamp - Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            color: var(--text-dark);
+            background-color: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px 5%;
+            background: white;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo i { color: var(--primary-blue); }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .btn-order-nav {
+            background: var(--primary-blue);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 10%;
+            background-image: linear-gradient(to right, white 60%, #f0f7ff 100%);
+        }
+
+        .hero-content { max-width: 500px; }
+
+        .hero-content h4 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .hero-content h1 span { color: var(--primary-blue); }
+
+        .hero-content p {
+            color: var(--text-light);
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        .btn-group { display: flex; gap: 15px; }
+
+        .btn-buy {
+            background: var(--primary-blue);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn-learn {
+            border: 1px solid #ccc;
+            color: var(--primary-blue);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .hero-image img { width: 350px; }
+
+        /* Features Grid */
+        .features-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 30px 10%;
+            background: #f8fbff;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .feat-item i {
+            font-size: 24px;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .feat-item p { font-weight: bold; font-size: 14px; }
+
+        /* Specifications Section */
+        .specs-section { padding: 50px 10%; }
+
+        .specs-section h4 { color: var(--primary-blue); margin-bottom: 5px; }
+
+        .specs-container {
+            border: 1px solid #eee;
+            border-radius: 20px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .spec-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .spec-icon {
+            width: 60px;
+            height: 60px;
+            background: #eef2ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            font-size: 24px;
+        }
+
+        .spec-text b { display: block; font-size: 16px; }
+        .spec-text span { color: var(--text-light); font-size: 14px; }
+
+        /* CTA Footer Card */
+        .cta-card {
+            background: #ebf5ff;
+            margin: 50px 10%;
+            border-radius: 30px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cta-left { display: flex; align-items: center; gap: 30px; }
+        .cta-img { width: 150px; }
+
+        .cta-info h2 { font-size: 32px; margin: 0 0 15px 0; }
+        
+        .cta-badges { display: flex; gap: 20px; font-size: 14px; }
+        .badge { display: flex; align-items: center; gap: 8px; }
+
+        .cta-right { text-align: right; }
+        .price-label { color: var(--text-light); margin-bottom: 5px; }
+        .price { color: var(--primary-blue); font-size: 36px; font-weight: bold; display: block; margin-bottom: 15px; }
+        
+        .btn-order-now {
+            background: var(--primary-blue);
+            color: white;
+            padding: 15px 50px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <i class="fas fa-lightbulb"></i> BrightLite
+        </div>
+        <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Specifications</a></li>
+            <li><a href="#">Order</a></li>
+        </ul>
+        <a href="#" class="btn-order-nav">Order Now</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h4>BRIGHTLITE SMART LAMP</h4>
+            <h1>Light Smarter,<br><span>Work Better</span></h1>
+            <p>Smart lamp with eye protection & wireless charging.</p>
+            <div class="btn-group">
+                <a href="#" class="btn-buy">Buy Now</a>
+                <a href="#" class="btn-learn">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://i.ibb.co/L8pXG5H/lamp-placeholder.png" alt="Smart Lamp">
+        </div>
+    </section>
+
+    <div class="features-bar">
+        <div class="feat-item"><i class="fas fa-sun"></i><p>Brightness</p></div>
+        <div class="feat-item"><i class="fas fa-eye"></i><p>Eye Protection</p></div>
+        <div class="feat-item"><i class="fas fa-bolt"></i><p>Wireless Charging</p></div>
+        <div class="feat-item"><i class="fas fa- स्वायत्त"></i><i class="fas fa-drafting-compass"></i><p>Flexible Design</p></div>
+    </div>
+
+    <section class="specs-section">
+        <h4>SPECIFICATIONS</h4>
+        <h2>Product Specifications</h2>
+        
+        <div class="specs-container">
+            <div class="spec-item">
+                <div class="spec-icon"><i class="fas fa-bolt"></i></div>
+                <div class="spec-text"><b>Power</b><span>10 Watt</span></div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="spec-text"><b>Material</b><span>ABS Plastic</span></div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-icon"><i class="fas fa-lightbulb"></i></div>
+                <div class="spec-text"><b>Light Modes</b><span>3 Modes (Warm, Natural, Cool)</span></div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-icon"><i class="fas fa-sliders-h"></i></div>
+                <div class="spec-text"><b>Brightness Levels</b><span>5 Levels</span></div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-icon"><i class="fas fa-broadcast-tower"></i></div>
+                <div class="spec-text"><b>Charging</b><span>Wireless Charging Pad</span></div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-icon"><i class="fas fa-ruler-combined"></i></div>
+                <div class="spec-text"><b>Dimensions</b><span>12 x 18 x 38 cm</span></div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-icon"><i class="fas fa-weight-hanging"></i></div>
+                <div class="spec-text"><b>Weight</b><span>500 g</span></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-card">
+        <div class="cta-left">
+            <img src="https://i.ibb.co/L8pXG5H/lamp-placeholder.png" alt="Lamp Small" class="cta-img">
+            <div class="cta-info">
+                <h2>Get Your BrightLite<br>Smart Lamp Now!</h2>
+                <div class="cta-badges">
+                    <span class="badge"><i class="fas fa-truck" style="color:var(--primary-blue)"></i> Free Shipping</span>
+                    <span class="badge"><i class="fas fa-check-circle" style="color:var(--primary-blue)"></i> 1 Year Warranty</span>
+                </div>
+            </div>
+        </div>
+        <div class="cta-right">
+            <span class="price-label">Special Price</span>
+            <span class="price">Rp 350.000</span>
+            <a href="#" class="btn-order-now">Order Now</a>
+        </div>
+    </div>
+
+</body>
+</html>
